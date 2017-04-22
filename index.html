@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TripAdvisor(猫途鹰)-全球旅游点评，酒店/景点/餐厅，真实旅客评价</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="content-header">
+        <a href="http://www.tripadvisor.cn/"><img class="logo" src="images/ddlogo.png" alt="猫途鹰"></a>
+        <ul>
+            <li><a href="#">点评</a></li>
+            <li><a href="#">加入</a></li>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">
+            <span></span>
+            <span></span>
+            </a></li>
+            <li><a href="#">关注我们</a></li>
+            <li><a href="#">活动</a></li>
+            <li><a href="#">下载APP</a></li>
+            <li><a href="#">￥</a></li>
+            <li><a href="#"><img src="images/flag.gif" alt="flag"></a></li>
+        </ul>
+        </div>
+        <div class="content-tab">
+            <div class="tab">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">目的地</a></li>
+                <li><a href="#">酒店</a></li>
+                <li><a href="#">景点</a></li>
+                <li><a href="#">美食</a></li>
+                <li><a href="#">游记</a></li>
+                <li><a href="#">指南</a></li>
+                <li><a href="#">旅游者之选</a></li>
+                <li><a href="#">写点评</a></li>
+            </ul>
+            <div class="search">
+                <form action="/Search" id="global_nav_search_form">
+                    <span id="MAIN_SEARCH_CONTAINER" class="mainSearchContainer small">
+                        <span class="findNearLabel">查找：</span>
+                        <input type="text" class="text focusClear" id="mainSearch" placeholder="酒店、餐厅、景点玩乐">
+                    </span>
+                    <div class="geoScopeContainer large" id="GEO_SCOPE_CONTAINER">
+                        <span class="findNearLabel">附近：</span>
+                        <input type="text" id="GEO_SCOPED_SEARCH_INPUT" class="text geoScopeInput focusClear"  placeholder="输入目的地">
+                    </div>
+                    <button id="SEARCH_BUTTON" class="search_button" type="submit">
+                        <div id="SEARCH_BUTTON_CONTENT">
+                            <label class="staticSearchLabel ui_icon search "></label>
+                            <div class="inner">搜索</div>
+                        </div>
+                    </button>
+                </form>
+            </div>
+          </div>
+        </div>
+    </header>
+<section>
+    <div class="header-redesign">
+        <video width="100%" height="504px" loop="loop"  autoplay="autoplay" style="object-fit: cover;">
+            <source src="http://ccm.ddcdn.com/cms/site/branding/videos/tahiti/video.webm" type="vide/webm">
+            <source src="http://ccm.ddcdn.com/cms/site/branding/videos/tahiti/video.mp4" type="video/mp4">
+            <!--
+            <img src="http://cc.ddcdn.com/img2/x.gif" class="hero-video-placeholder" >
+            -->
+        </video>
+        <div class="header-inner">
+            <div class="main-inner">
+            <div class="slogan">
+                <img class="spr-rebranding bigtext" src="http://cc.ddcdn.com/img2/x.gif" alt="不同视野看世界（共享三亿条来自全球旅行者的真实点评）">
+                <button class="with-transition  btngo">第一次使用？</button>
+            </div>
+        </div>
+        <div class="searchbox">
+            <div class="tab-option">
+                <input id="hotel" name="tabOption" type="radio" class="checked">
+                <label for="hotel" id="hotelLabel">酒店</label>
+                <input type="radio" name="tabOption" id="attraction">
+                <label for="attraction" id="attractionLabel">景点</label>
+                <input type="radio" name="tabOption" id="restaurant">
+                <label for="restaurant" id="restaurantLabel">美食</label>
+                <input type="radio" name="tabOption" id="destination">
+                <label for="destination" id="destinationLabel">目的地</label>
+            </div>
+            <div class="search-forms">
+                <form action="/Search" id="hotelSearch">
+                    <div id="hotel-search-bar-wrap date-wrapper" class="search-bar-wrap">
+                        <input type="text" name="q" class="hotal search-input text focusClear" tabindex="2" placeholder="城市或酒店名称" >
+                        <span id="hotelSearch-icon" class="handler-icon"></span>
+                    </div>
+                    <div class="date-wrapper">
+                        <input type="text" class="checkin" placeholder="入住时间">
+                        <span class="check-icon"></span>
+                    </div>
+                    <div class="date-wrapper">
+                        <input type="text" class="checkout" placeholder="退房时间">
+                        <span class="check-icon"></span>
+                    </div>
+                    <input type="submit" class="search home-image" value="搜索">
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="recentReviewersBar" class="info">
+        <div class="inner-info">
+        <ul>
+            <li><img src="images/daodaoavatar081.jpg" alt=""></li>
+            <li><img src="images/avatar.jpg" alt=""></li>
+            <li><img src="images/daodaoavatar004.jpg" alt=""></li>
+            <li><img src="images/daodaoavatar064.jpg" alt=""></li>
+        </ul>
+        <div class="des-text">
+            今日全球新增
+            <em>旅游点评</em>
+            <em>197,042</em>
+        </div>
+        <ul>
+            <li><img src="images/daodaoavatar023.jpg" alt=""></li>
+            <li><img src="images/daodaoavatar016.jpg" alt=""></li>
+            <li><img src="images/daodaoavatar098.jpg" alt=""></li>
+            <li><img src="images/daodaoavatar021.jpg" alt=""></li>
+        </ul>
+        <div class="des-text">
+            超过
+            <em>3亿</em>
+            条
+            <em>旅游点评</em>
+            和建议，全部来自真实旅行者！
+        </div>
+        <ul>
+            <li><img src="images/daodaoavatar076.jpg" alt=""></li>
+            <li><img src="images/daodaoavatar077.jpg" alt=""></li>
+            <li><img src="images/emersonhoo.jpg" alt=""></li>
+            <li><img src="images/daodaoavatar091.jpg" alt=""></li>
+        </ul>
+        </div>
+    </div>
+    <div class="popularDestinations">
+        <div class="introduceItems">
+            <ul class="regionTabs">
+                <li class="active"><a href="#">亚洲</a></li>
+                <li><a href="#">欧洲</a></li>
+                <li><a href="#">美洲</a></li>
+                <li><a href="#">大洋洲</a></li>
+                <li><a href="#">全球</a></li>
+            </ul>
+            <ul class="titles easyClear">
+                <li>
+                    <div class="pictrue">
+                        <a href="#"><img class="bg" src="images/phuket.jpg" alt="普吉岛">
+                        <span class="ranking">
+                            Top1
+                        </span>
+                            <div class="reviews">
+                                <div class="reviewBox">
+                                    <span class="reviewCaption">
+                                        <img src="images/daodaoavatar083.jpg" alt="">
+                                        <img src="images/daodaoavatar085.jpg" alt="">
+                                        <img src="images/daodaoavatar079.jpg" alt="">
+                                        <img src="images/daodaoavatar009.jpg" alt="">
+                                        <span class="append-margin">
+                                            694,325条点评和建议
+                                        </span>
+                                    </span>
+                                    <span class="reviewFigure">
+                                        <p class="reviewTitle">"激动人心的"</p>
+                                        <span class="reviewInfo">来自：KiwiWoppa</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                        <div class="title">
+                            <a href="#" class="countryName cName">泰国</a>
+                            <a href="#" class="cityName cName">普吉岛</a>
+                            <div class="popIcons">
+                                <a href="#" class="wrap-stb wrap-icon">
+                                    <span class="stb blockIcon">游记</span>
+                                </a>
+                                <a href="#" class="wrap-cityGuide wrap-icon">
+                                    <span class="cityGuide blockIcon">指南</span>
+                                </a>
+                            </div>
+                        </div>
+                    <ul class="counts">
+                        <li><a href="#">酒店 752</a></li>
+                        <li><a href="#">景点 1257</a></li>
+                        <li><a href="#">餐厅 2655</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="pictrue">
+                        <a href="#"><img class="bg" src="images/bangkok.jpg" alt="曼谷">
+                            <span class="ranking">
+                            Top2
+                        </span>
+                            <div class="reviews">
+                                <div class="reviewBox">
+                                    <span class="reviewCaption">
+                                        <img src="images/daodaoavatar075.jpg" alt="">
+                                        <img src="images/daodaoavatar049.jpg" alt="">
+                                        <img src="images/daodaoavatar028.jpg" alt="">
+                                        <img src="images/daodaoavatar047.jpg" alt="">
+                                        <span class="append-margin">
+                                            1,199,955条点评和建议
+                                        </span>
+                                    </span>
+                                    <span class="reviewFigure">
+                                        <p class="reviewTitle">"庄严但又带来宁静的宗教地方"</p>
+                                        <span class="reviewInfo">来自: paul96338812</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" class="countryName cName">泰国</a>
+                        <a href="#" class="cityName cName">曼谷</a>
+                        <div class="popIcons">
+                            <a href="#" class="wrap-stb wrap-icon ">
+                                <span class="stb blockIcon">游记</span>
+                            </a>
+                            <a href="#" class="wrap-cityGuide wrap-icon">
+                                <span class="cityGuide blockIcon">指南</span>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="counts">
+                        <li><a href="#">酒店 851</a></li>
+                        <li><a href="#">景点 1741</a></li>
+                        <li><a href="#">餐厅 10637</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="pictrue">
+                        <a href="#"><img class="bg" src="images/chiang-mai.jpg" alt="清迈">
+                            <span class="ranking">
+                            Top3
+                        </span>
+                            <div class="reviews">
+                                <div class="reviewBox">
+                                    <span class="reviewCaption">
+                                        <img src="images/daodaoavatar043.jpg" alt="">
+                                        <img src="images/daodaoavatar019.jpg" alt="">
+                                        <img src="images/daodaoavatar012.jpg" alt="">
+                                        <img src="images/daodaoavatar054.jpg" alt="">
+                                        <span class="append-margin">
+                                            339，444条点评和建议
+                                        </span>
+                                    </span>
+                                    <span class="reviewFigure">
+                                        <p class="reviewTitle">"神奇的大寺庙"</p>
+                                        <span class="reviewInfo">来自: Pam1Dec</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" class="countryName cName">泰国</a>
+                        <a href="#" class="cityName cName">清迈</a>
+                        <div class="popIcons">
+                            <a href="#" class="wrap-stb wrap-icon ">
+                                <span class="stb blockIcon">游记</span>
+                            </a>
+                            <a href="#" class="wrap-cityGuide wrap-icon">
+                                <span class="cityGuide blockIcon">指南</span>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="counts">
+                        <li><a href="#">酒店 374</a></li>
+                        <li><a href="#">景点 897</a></li>
+                        <li><a href="#">餐厅 2032</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="pictrue">
+                        <a href="#"><img class="bg" src="images/tokyo.jpg" alt="东京">
+                            <span class="ranking">
+                            Top4
+                        </span>
+                            <div class="reviews">
+                                <div class="reviewBox">
+                                    <span class="reviewCaption">
+                                        <img src="images/daodaoavatar043.jpg" alt="">
+                                        <img src="images/daodaoavatar044.jpg" alt="">
+                                        <img src="images/caption.jpg" alt="">
+                                        <img src="images/daodaoavatar086.jpg" alt="">
+                                        <span class="append-margin">
+                                            778,919条点评和建议
+                                        </span>
+                                    </span>
+                                    <span class="reviewFigure">
+                                        <p class="reviewTitle">"都市里的一片森林"</p>
+                                        <span class="reviewInfo">来自: u6203024</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" class="countryName cName">日本</a>
+                        <a href="#" class="cityName cName">东京</a>
+                        <div class="popIcons">
+                            <a href="#" class="wrap-stb wrap-icon">
+                                <span class="stb blockIcon">游记</span>
+                            </a>
+                            <a href="#" class="wrap-cityGuide wrap-icon">
+                                <span class="cityGuide blockIcon">指南</span>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="counts">
+                        <li><a href="#">酒店 739</a></li>
+                        <li><a href="#">景点 4440</a></li>
+                        <li><a href="#">餐厅 90290</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="pictrue">
+                        <a href="#"><img class="bg" src="images/kyoto.jpg" alt="京都市">
+                            <span class="ranking">
+                            Top5
+                        </span>
+                            <div class="reviews">
+                                <div class="reviewBox">
+                                    <span class="reviewCaption">
+                                        <img src="images/daodaoavatar044.jpg" alt="">
+                                        <img src="images/daodaoavatar091.jpg" alt="">
+                                        <img src="images/daodaoavatar030.jpg" alt="">
+                                        <img src="images/daodaoavatar019.jpg" alt="">
+                                        <span class="append-margin">
+                                            261,000条点评和建议
+                                        </span>
+                                    </span>
+                                    <span class="reviewFigure">
+                                        <p class="reviewTitle">"人太多了"</p>
+                                        <span class="reviewInfo">来自: Kwan S</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" class="countryName cName">日本</a>
+                        <a href="#" class="cityName cName">京都市</a>
+                        <div class="popIcons">
+                            <a href="#" class="wrap-stb wrap-icon">
+                                <span class="stb blockIcon">游记</span>
+                            </a>
+                            <a href="#" class="wrap-cityGuide wrap-icon">
+                                <span class="cityGuide blockIcon">指南</span>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="counts">
+                        <li><a href="#">酒店 360</a></li>
+                        <li><a href="#">景点 1659</a></li>
+                        <li><a href="#">餐厅 12171</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="pictrue">
+                        <a href="#"><img class="bg" src="images/vinpearl-amusement-park.jpg" alt="芽庄">
+                            <span class="ranking">
+                            Top6
+                        </span>
+                            <div class="reviews">
+                                <div class="reviewBox">
+                                    <span class="reviewCaption">
+                                        <img src="images/daodaoavatar055.jpg" alt="">
+                                        <img src="images/daodaoavatar033.jpg" alt="">
+                                        <img src="images/daodaoavatar010.jpg" alt="">
+                                        <img src="images/daodaoavatar099.jpg" alt="">
+                                        <span class="append-margin">
+                                            110,361条点评和建议
+                                        </span>
+                                    </span>
+                                    <span class="reviewFigure">
+                                        <p class="reviewTitle">"必定参观"</p>
+                                        <span class="reviewInfo">来自: Winnie L</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" class="countryName cName">越南</a>
+                        <a href="#" class="cityName cName">芽庄</a>
+                        <div class="popIcons">
+                            <a href="#" class="wrap-stb wrap-icon">
+                                <span class="stb blockIcon">游记</span>
+                            </a>
+                            <a href="#" class="wrap-cityGuide wrap-icon">
+                                <span class="cityGuide blockIcon">指南</span>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="counts">
+                        <li><a href="#">酒店 191</a></li>
+                        <li><a href="#">景点 279</a></li>
+                        <li><a href="#">餐厅 479</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="pictrue">
+                        <a href="#"><img class="bg" src="images/osaka-castle.jpg" alt="大阪市">
+                            <span class="ranking">
+                            Top7
+                        </span>
+                            <div class="reviews">
+                                <div class="reviewBox">
+                                    <span class="reviewCaption">
+                                        <img src="images/daodaoavatar091.jpg" alt="">
+                                        <img src="images/yolanda-lan.jpg" alt="">
+                                        <img src="images/daodaoavatar058.jpg" alt="">
+                                        <img src="images/daodaoavatar035.jpg" alt="">
+                                        <span class="append-margin">
+                                            214,454条点评和建议
+                                        </span>
+                                    </span>
+                                    <span class="reviewFigure">
+                                        <p class="reviewTitle">" 好热闹的地方"</p>
+                                        <span class="reviewInfo">来自: Kwan S</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#" class="countryName cName">日本</a>
+                        <a href="#" class="cityName cName">大阪市</a>
+                        <div class="popIcons">
+                            <a href="#" class="wrap-stb wrap-icon">
+                                <span class="stb blockIcon">游记</span>
+                            </a>
+                            <a href="#" class="wrap-cityGuide wrap-icon">
+                                <span class="cityGuide blockIcon">指南</span>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="counts">
+                        <li><a href="#">酒店 289</a></li>
+                        <li><a href="#">景点 1126</a></li>
+                        <li><a href="#">餐厅 28283</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="pictrue">
+                        <a href="#"><img class="bg" src="images/bg_region_asia.jpg" ></a>
+                        <button>查看亚洲目的地</button>
+                    </div>
+                    <ul class="countries">
+                        <li><a href="#">新加坡</a></li>
+                        <li><a href="#">中国</a></li>
+                        <li><a href="#">印度尼西亚</a></li>
+                        <li><a href="#">菲律宾</a></li>
+                        <li><a href="#">新加坡</a></li>
+                        <li><a href="#">台北市</a></li>
+                        <li><a href="#">乌布</a></li>
+                        <li><a href="#">班乃岛</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="destEntry" class="dest-entry">
+                <a href="#" class="show-entry" target="_blank">
+                    <h2>查看全部目的地></h2>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="specialty">
+        <ul class="specialty-items">
+            <li>
+                <a href="#" class="traveler-choice"><img src="images/traveler-choice.png" alt="旅游者之选">
+                    <div class="overlay overlay1">
+                        <div class="travalerChoice"></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="traveler-choice"><img src="images/city_guide.png" alt="自助旅游指南">
+                    <div class="overlay overlay2">
+                    <div class="main-content">
+                        <span class="guide-icon"></span>
+                        <h2>一切精华，尽在掌握</h2>
+                        <p class="underline">寻找出境必备自助游指南></p>
+                    </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="traveler-choice"><img src="images/tourism_blog.png" alt="旅游攻略">
+                    <div class="overlay overlay3">
+                    <div class="main-content">
+                        <span class="blog-icon"></span>
+                        <h2>玩法大不同!</h2>
+                        <p class="underline">寻找最适合你的旅游攻略 ></p>
+                    </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="traveler-choice"><img src="images/download_application.png" alt="TripAdvisor APP">
+                    <div class="overlay overlay4">
+                    <div class="caption-content">
+                        <h2>TripAdvisor APP</h2>
+                        <p>随时随地查找当地周边信息</p>
+                        <p>好吃好玩一网打尽!</p>
+                    </div>
+                    <div class="downLoad-code"></div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div style="clear:both"></div>
+    </div>
+    <div class="mod-b">
+        <div class="mod-hd">
+            <h2>人气指南</h2>
+            <a href="#" class="sub-title" target="_blank">更多></a>
+        </div>
+        <ul class="guide-list">
+            <li>
+                <a href="#" class="thumb">
+                    <img src="images/115_d.jpg" alt="香港电车游旅游攻略">
+                    <span class="btn-dnld"></span>
+                </a>
+                <div class="guide-info">
+                    <a href="#">香港电车游</a>
+                    <p>2016-01-19</p>
+                    <p>5.96M</p>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="thumb">
+                    <img src="images/15_d.jpg" alt="普吉岛游旅游攻略">
+                    <span class="btn-dnld"></span>
+                </a>
+                <div class="guide-info">
+                    <a href="#">普吉岛</a>
+                    <p>2015-05-15</p>
+                    <p>6.43M</p>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="thumb">
+                    <img src="images/88_d.jpg" alt="吃住京东游旅游攻略">
+                    <span class="btn-dnld"></span>
+                </a>
+                <div class="guide-info">
+                    <a href="#">吃在京东</a>
+                    <p>2015-05-19</p>
+                    <p>4.24M</p>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="thumb">
+                    <img src="images/43_d.jpg" alt="芭堤雅游旅游攻略">
+                    <span class="btn-dnld"></span>
+                </a>
+                <div class="guide-info">
+                    <a href="#">芭堤雅</a>
+                    <p>2015-05-18</p>
+                    <p>5.11M</p>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="thumb">
+                    <img src="images/80_d.jpg" alt="骑行台湾攻略下载">
+                    <span class="btn-dnld"></span>
+                </a>
+                <div class="guide-info">
+                    <a href="#">骑行台湾</a>
+                    <p>2015-05-19</p>
+                    <p>5.67M</p>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="thumb">
+                    <img src="images/50_d.jpg" alt="夏威夷攻略下载">
+                    <span class="btn-dnld"></span>
+                </a>
+                <div class="guide-info">
+                    <a href="#">夏威夷</a>
+                    <p>2015-05-18</p>
+                    <p>6.07M</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="top-trip">
+        <div class="mod-hd">
+            <h2>精品游记</h2>
+            <a href="#" class="sub-title" target="_blank">更多></a>
+        </div>
+        <ul class="trip-list">
+            <li>
+                <a href="#" target="_blank">
+                    <img class="blog-img" src="images/blog10715-2.jpg">
+                    <div class="h4">
+                        大阪京都吃住玩买fun，一张银联卡就够啦！
+                    </div>
+                    <div class="dest-info">
+                        <span class="dest-icon"></span>
+                        <span class="dest-name">大阪市，京都市</span>
+                    </div>
+                    <div class="text-brief">
+                        上周和我爸一起去了大阪和京都。我虽然只有短短四晚但我拿了个32寸大箱子去的，...
+                    </div>
+                    <div class="author-info">
+                        <img class="author-img" src="images/daodaoavatar085.jpg">
+                        <span>白美美</span>
+                        <span class="publish-date">2017-02-13</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+            <a href="#" target="_blank">
+                <img class="blog-img" src="images/blog50428-101.jpg">
+                <div class="h4">
+                    带着你走遍天下之~北海道の冰雪童话故事（函馆、洞爷、登别、札幌、旭川、小樽、京都、奈良）
+                </div>
+                <div class="dest-info">
+                    <span class="dest-icon"></span>
+                    <span class="dest-name">东京,函馆,登别,札幌,旭川,小樽,京都,奈良</span>
+                </div>
+                <div class="text-brief">
+                    霓虹国，我又来啦！
+                </div>
+                <div class="author-info">
+                    <img class="author-img" src="images/daodaoavatar004.jpg">
+                    <span>vivian</span>
+                    <span class="publish-date">2016-09-20</span>
+                </div>
+            </a>
+        </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img class="blog-img" src="images/blog80206-4.jpg">
+                    <div class="h4">
+                        “泰”美斯米兰岛【普吉岛-曼谷-华欣】
+                    </div>
+                    <div class="dest-info">
+                        <span class="dest-icon"></span>
+                        <span class="dest-name">普吉岛,斯米兰群岛,华欣,七岩,曼谷</span>
+                    </div>
+                    <div class="text-brief">
+                        泰国之旅是间隔年的最后一站，一年半的时间犹如白驹过隙，流浪的孩子要回家了，...
+                    </div>
+                    <div class="author-info">
+                        <img class="author-img" src="images/daodaoavatar008.jpg">
+                        <span>Vincent文森特</span>
+                        <span class="publish-date">2016-09-26</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img class="blog-img" src="images/blog10531-32.jpg">
+                    <div class="h4">
+                        【巴厘岛8日】巴厘，一场不愿醒来的公主梦
+                    </div>
+                    <div class="dest-info">
+                        <span class="dest-icon"></span>
+                        <span class="dest-name">巴厘岛</span>
+                    </div>
+                    <div class="text-brief">
+                        每次游记开头都不知道说点儿啥，尝试过煽情的开头，却很难动情的结尾，可能我生...
+                    </div>
+                    <div class="author-info">
+                        <img class="author-img" src="images/daodaoavatar023.jpg">
+                        <span>约约皮</span>
+                        <span class="publish-date">2016-04-25</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="makefriends">
+        <h2>跟我做个朋友！</h2>
+        <div class="wechat">
+            <div class="qr-code"></div>
+            <div class="wechat-content">
+                <span>关注官方微信: TripAdvisor猫途鹰</span>
+                <p>随时掌握最新潮、最独家的旅游攻略!</p>
+                <p>别人出国都在玩什么? 老外的口味真的跟我们不一样吗?</p>
+                <p>教你轻松摆脱小白行程, 人人都是旅游达人!</p>
+            </div>
+        </div>
+
+        <div style="clear:both;"></div>
+    </div>
+    <div class="destination">
+        <h2>热门旅游目的地
+            <span class="orderMsg">(按英文首字母排序)</span>
+        </h2>
+    <div class="dest-intro">
+        欢迎你到我们的
+        <a href="#">酒店</a>、
+        <a href="#">景点</a>、
+        <a href="#">餐厅</a>、
+        <a href="#">购物</a>、
+        <a href="#">当地活动</a>、
+        <a href="#">目的地</a>
+        等页面逛逛，发现更多精彩。
+    </div>
+        <ul class="list-items">
+            <li>
+                <a href="#" target="_blank">阿根廷旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">澳大利亚旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">奥地利旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">比利时旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">伯利兹旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">巴西旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">柬埔寨旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">加拿大旅游</a>
+            </li>
+        </ul>
+        <ul class="list-items">
+            <li>
+                <a href="#" target="_blank">捷克共和国旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">丹麦旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">埃及旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">比英格兰旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">斐济旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">法国旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">德国旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">希腊旅游</a>
+            </li>
+        </ul>
+            <ul class="list-items">
+                <li>
+                    <a href="#" target="_blank">香港特别行政区旅游</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#" target="_blank">匈牙利旅游</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">印度旅游</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">印度尼西亚旅游</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#" target="_blank">爱尔兰旅游</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">意大利旅游</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#" target="_blank">日本旅游</a>
+                    <span></span>
+                </li>
+                <li>
+                    <a href="#" target="_blank">澳门特别行政区旅游</a>
+                </li>
+            </ul>
+        <ul class="list-items">
+            <li>
+                <a href="#" target="_blank">马来西亚旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">马尔代夫旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">马里亚那群岛旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">毛里求斯旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">墨西哥旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">尼泊尔旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">新西兰旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">菲律宾旅游</a>
+            </li>
+        </ul>
+        <ul class="list-items">
+            <li>
+                <a href="#" target="_blank">葡萄牙旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">俄罗斯旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">苏格兰旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">新加坡旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">南非旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">韩国旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">西班牙旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">斯里兰卡旅游</a>
+            </li>
+        </ul>
+        <ul class="list-items">
+            <li>
+                <a href="#" target="_blank">瑞士旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">台湾旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">泰国旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">荷兰旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">土耳其旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">阿拉伯联合酋长旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">美国旅游</a>
+                <span></span>
+            </li>
+            <li>
+                <a href="#" target="_blank">越南旅游</a>
+            </li>
+        </ul>
+        <div style="clear: both"></div>
+    </div>
+    <div class="destination">
+        <h2>国内旅游优选酒店
+            <span class="orderMsg">(按英文首字母排序)</span>
+        </h2>
+        <ul class="list-items">
+            <li>
+                <a href="#" target="_blank">北京酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">长沙酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">成都酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">重庆酒店</a>
+            </li>
+        </ul>
+        <ul class="list-items">
+            <li>
+                <a href="#" target="_blank">大连酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">广州酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">杭州酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">香港酒店</a>
+            </li>
+        </ul>
+        <ul class="list-items">
+            <li>
+                <a href="#" target="_blank">黄山酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">九塞沟酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">丽江酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">澳门酒店</a>
+            </li>
+        </ul>
+        <ul class="list-items">
+            <li>
+                <a href="#" target="_blank">南京酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">青岛酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">三亚酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">上海酒店</a>
+            </li>
+        </ul>
+        <ul class="list-items">
+            <li>
+                <a href="#" target="_blank">深圳酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">苏州酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">天津酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">武汉酒店</a>
+            </li>
+        </ul>
+        <ul class="list-items">
+            <li>
+                <a href="#" target="_blank">厦门酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">西安酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">阳朔酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">珠海酒店</a>
+            </li>
+        </ul>
+        <div style="clear: both"></div>
+    </div>
+    <div class="destination">
+        <h2>友情链接</h2>
+        <ul class="list-item">
+            <li>
+                <a href="#" target="_blank">猫途鹰旅游资讯</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">国旅在线</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">蚂蜂窝自由行</a>
+            </li>
+        </ul>
+        <ul class="list-item">
+            <li>
+                <a href="#" target="_blank">酷讯网</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">五分旅游网</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">春秋航空</a>
+            </li>
+        </ul>
+        <ul class="list-item">
+            <li>
+                <a href="#" target="_blank">艺龙旅行网</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">相约久久旅游网</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">铁友火车票</a>
+            </li>
+        </ul>
+        <ul class="list-item">
+            <li>
+                <a href="#" target="_blank">同程旅游</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">携程旅游攻略</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">格林豪泰</a>
+            </li>
+        </ul>
+        <ul class="list-item">
+            <li>
+                <a href="#" target="_blank">住哪儿</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">去哪儿网机票</a>
+            </li>
+        </ul>
+        <ul class="list-item">
+            <li>
+                <a href="#" target="_blank">汉庭连锁酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">梦之旅</a>
+            </li>
+        </ul>
+        <ul class="list-item">
+            <li>
+                <a href="#" target="_blank">金陵连锁酒店</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">户外运动</a>
+            </li>
+        </ul>
+        <ul class="list-item">
+            <li>
+                <a href="#" target="_blank">途牛旅游网</a>
+            </li>
+            <li>
+                <a href="#" target="_blank">北京神舟国旅</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<footer>
+    <div class="footer-content">
+        <div class="brand">
+            <img src="images/ddlogo_foot.png" alt="TripAdvisor(猫途鹰)">
+            <p class="slogan">提供针对酒店、度假村、机票、度假租屋、旅行套餐和更多产品的点评和建议，帮您计划并预定完美的旅程！</p>
+        </div>
+        <div class="links">
+            <a href="#" target="_blank">
+                关于我们
+            </a>
+            |
+            <a href="#" target="_blank">
+                新闻动态
+            </a>
+            |
+            <a href="#" target="_blank">
+                工作机会
+            </a>
+            |
+            <a href="#" target="_blank">
+                商务合作
+            </a>
+            |
+            <a href="#" target="_blank">
+                新闻动态
+            </a>
+            |
+            <a href="#" target="_blank">
+                会员中心
+            </a>
+            |
+            <a href="#" target="_blank">
+                业主中心
+            </a>
+            |
+            <a href="#" target="_blank">
+                常见问题
+            </a>
+            |
+            <a href="#" target="_blank">
+                意见反馈
+            </a>
+            |
+            <a href="#" target="_blank">
+                联系我们
+            </a>
+            |
+            <a href="#" target="_blank">
+                营业执照
+            </a>
+            |
+        </div>
+        <div class="copyright">
+            <p>
+                © 2008-2017 TripAdvisor 版权所有。 TripAdvisor(猫途鹰)的
+                <a href="#">使用条款</a> 和 <a href="#">隐私政策</a>
+            </p>
+            <p>
+                * TripAdvisor不是旅行社，也不是旅游预订服务代理商。我们提供免费、客观、公正的旅游资讯服务。
+            </p>
+        </div>
+        <div class="icp">
+            <a href="#">
+                京ICP证080678号
+            </a>
+            <a href="#">
+                京ICP备09040564号
+            </a>
+            <a href="#">
+                京公网安备11010502027214号
+            </a>
+            <a href="#">
+                途趣网信息技术（北京）有限公司
+            </a>
+        </div>
+        <img src="images/cnnic.png" alt="">
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,867 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial,Tahoma,"hiragino sans gb","Microsoft YaHei","Heiti SC",SimHei,SimSun,sans-serif;
+    background-color: #eee;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: #fff;
+}
+header .content-header{
+    padding:10px 0;
+}
+.content-header{
+    width:80%;
+    margin:0 auto;
+}
+.content-header .logo{
+    vertical-align: middle;
+    width: 489px;
+    height: 34px;
+}
+ ul li, ul{
+    display: inline-block;
+}
+.content-header ul{
+    margin-left:80px;
+}
+.content-header ul li{
+    border-left: 1px solid #e9e9e9;
+    padding:0 10px;
+}
+.content-header ul li a{
+    font-size: 13px;
+    color:#000;
+}
+.content-header ul li img{
+    vertical-align: middle;
+}
+.content-header ul li span:first-child{
+    display: block;
+    background: url(images/sprite_header.png);
+    background-position: -100px 0;
+    width:18px;
+    height:14px;
+    float:left;
+    margin-right:5px;
+}
+
+.content-header ul li span:last-child{
+    float:left;
+    display: block;
+    background: url(images/sprite_header.png);
+    background-position: 0 0;
+    width:17px;
+    height:14px;
+}
+header .content-tab a{
+    color:#fff;
+}
+header .content-tab{
+    background-color:#589442;
+}
+header .content-tab .tab{
+    width:80%;
+    margin:0 auto;
+}
+header .content-tab .tab ul li{
+    padding:10px;
+    font-weight:bolder;
+    font-size: 15px;
+    text-align: center;
+    color:#fff;
+}
+header .content-tab .tab ul li:first-child{
+    padding:0;
+}
+header .content-tab .tab ul li:hover:first-child{
+    background-color:#589442;
+}
+header .content-tab .tab ul li:hover{
+    background-color:green;
+}
+
+header .content-tab .mainSearchContainer{
+    border:1px solid #cecbbd;
+    background-color: #fff;
+    border-radius: 4px 0 0 4px;
+    display: inline-block;
+    width:645px;
+    height:35px;
+    line-height: 35px;
+}
+header .content-tab .geoScopeContainer{
+    border:1px solid #cecbbd;
+    background-color:  #e9e9e9;
+    display: inline-block;
+    width:397px;
+    height:35px;
+    line-height: 35px;
+    margin-left: -5px
+}
+
+.content-tab .search_button{
+    width:118px;
+    height:34px;
+    margin-left:-4px;
+    background-color: #2c2c2c;
+    color:#fff;
+    border:0;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.27);
+    vertical-align: top;
+    cursor: pointer;
+}
+.content-tab .findNearLabel{
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left:10px;
+}
+.content-tab .inner{
+    display: inline-block;
+}
+.content-tab form{
+    padding-bottom:10px;
+}
+section .header-redesign{
+    position: relative;
+}
+section .header-inner{
+    position: absolute;
+    top:80px;
+    left:15%;
+}
+section .slogan .spr-rebranding{
+    background: url(images/sprite_branding_intro-v1629842689.png)no-repeat;
+    background-position: 0 -550px;
+    display: block;
+    margin-bottom: 30px;
+    width: 442px;
+    height: 96px;
+}
+section .slogan button{
+    border:none;
+    padding:10px 35px;
+    border-radius: 3px;
+    background: #e46715;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+section .searchbox{
+    margin-top:120px;
+}
+section  form {
+    display: inline-flex;
+}
+section .search-forms{
+    margin-top:20px;
+}
+.tab-option input{
+   -webkit-appearance: none;
+    appearance:none;
+    -moz-appearance: none;
+    background: url(images/sprite_homepage_2014-v3288132379.png)no-repeat 0 -250px;
+    width:20px;
+    height:20px;
+    outline: none;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.tab-option .checked{
+    background: url(images/sprite_homepage_2014-v3288132379.png)no-repeat 0 -200px;
+}
+.tab-option label{
+    font-size:18px;
+    margin-right:20px;
+    color:#fff;
+    font-weight: 500;
+}
+.search-forms .search-bar-wrap,.search-forms .date-wrapper{
+    width:350px;
+    height:40px;
+    line-height: 40px;
+    border: 1px solid #cecbbd;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.search-forms .date-wrapper{
+    width:180px;
+    margin-left:10px;
+    position: relative;
+}
+.text,.search-forms .date-wrapper input{
+    color: #2c2c2c;
+    font-size: 16px;
+    white-space: nowrap;
+    border: 0 none;
+    outline: none;
+    padding: 0 8px;
+    background-color: transparent;
+}
+.search-forms .date-wrapper .check-icon {
+    content: "";
+    display: block;
+    background: url(images/sprite_homepage_2014-v3288132379.png)no-repeat 0 -150px;
+    width:30px;
+    height:30px;
+    position: absolute;
+    right:0;
+    top:5px;
+}
+.home-image{
+    width:150px;
+    height:40px;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    background-color:forestgreen;
+    color:#fff;
+    font-size: 16px;
+    margin-left:15px;
+    border-radius: 4px;
+}
+section .info{
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    color: #666;
+}
+section .inner-info{
+    width:80%;
+    margin:0 auto;
+    display: flex;
+}
+section .info img{
+    display: inline-block;
+    width:28px;
+    height:28px;
+    border:1px solid #ccc;
+    border-radius: 100%;
+    background-color: #ccc;
+    vertical-align: middle;
+}
+section  .des-text{
+   font-size: 16px;
+    margin:0 20px;
+}
+section .inner-info em{
+    font-size: 18px;
+    color:#589442;
+    margin:0 3px;
+    font-style: normal;
+}
+section .introduceItems{
+    width:80%;
+    margin:50px auto 20px;
+}
+section .introduceItems .regionTabs{
+    width:1170px;
+    display: table;
+    position: relative;
+}
+section .introduceItems .regionTabs li {
+    width:20%;
+    display: table-cell;
+    text-align: center;
+    border:1px solid #ccc;
+    padding:10px 0;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 1px 5px 1px #e3e2df;
+}
+section .introduceItems .regionTabs .active a{
+    color: #589442;
+}
+section .introduceItems .regionTabs .active {
+    background: #fff;
+    border-bottom: 4px solid #589442;
+}
+section .introduceItems .regionTabs .active:after{
+    content:"";
+    border: solid transparent;
+    border-top-color: #589442;
+    border-width: 6px 8px;
+    display: block;
+    position: absolute;
+    left: 117px;
+    bottom: -12px;
+    margin-left: -8px;
+}
+section .introduceItems .regionTabs li a{
+    color: #9e9a89;
+    font-weight: bold;
+    background: #f4f3f0;
+}
+section .introduceItems .regionTabs li:hover{
+    background: #cccccc;
+}
+section .introduceItems .regionTabs li:hover a{
+    background: transparent;
+    color:#2c2c2c;
+}
+section .titles{
+    margin-top:20px;
+    display: table;
+}
+section .titles>li{
+    width: 368px;
+    margin-bottom: 40px;
+    margin-right:30px;
+    border: 1px solid #e9e8e6;
+    background: #fff;
+    border-bottom-color: #dad7c8;
+    position: relative;
+    display: inline-table;
+}
+
+section .pictrue{
+    position: relative;
+}
+section .pictrue .bg{
+    width:368px;
+    height:221px;
+}
+section .reviews img{
+    width:18px;
+    height:18px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+    vertical-align: middle;
+}
+section .reviews {
+    padding: 0 15px;
+    height: 45px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.4) 25%, rgba(0, 0, 0, 0.9) 100%);
+}
+section .pictrue .ranking{
+    background: url(images/sprite_homepage_2015-v1123690029.png) no-repeat 0 0;
+    width:76px;
+    height:36px;
+    position: absolute;
+    right: -3px;
+    top: 15px;
+    line-height: 36px;
+    font-size: 16px;
+    font-style: italic;
+    font-family: Krungthep,"Microsoft YaHei",arial;
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+}
+section .reviewBox .append-margin{
+    font-size:14px;
+    color:#fff;
+    vertical-align: middle;
+}
+section .reviewBox span{
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    display: block;
+}
+section .reviewBox .reviewFigure{
+    padding-top:20px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    color:#fff;
+    display: none;
+}
+section .reviewBox:hover .reviewCaption{
+    display:none;
+}
+section .reviewBox:hover .reviewFigure{
+    display: block;
+    transform: translateY(-100%);
+}
+section .title{
+    position: relative;
+    display:block;
+    height:48px;
+    line-height: 48px;
+    border-bottom: 1px solid #f6f6f6;
+    background:#fff;
+}
+section .title .cName:hover{
+    color:#4f92b8;
+}
+section .title a{
+    font-size: 18px;
+    color:#2c2c2c;
+    margin-left:10px;
+}
+section .title .countryName:after{
+    content: "";
+    border-right:1px solid #ccc;
+    height: 14px;
+    margin-left:10px;
+}
+section .popIcons{
+    position: absolute;
+    top:0;
+    right:0;
+}
+section .wrap-stb{
+    background: #498e6c;
+}
+section .wrap-stb:hover{
+    background: darkgreen;
+}
+section .blockIcon{
+    display: block;
+    margin: 0 8px;
+    text-align: right;
+}
+section .stb{
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat transparent 0 -150px;
+}
+section .wrap-cityGuide{
+    background: #4f92b8;
+    margin-right:10px;
+}
+section .wrap-cityGuide:hover{
+    background: #069;
+}
+section .cityGuide{
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat transparent 0 -100px;
+}
+section a.wrap-icon{
+    display: inline-block;
+    width:55px;
+    color:#fff;
+    font-size: 12px;
+    border-radius: 3px;
+    line-height: 24px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+section .counts{
+    width:100%;
+    display: table;
+    height: 21px;
+    margin: 12px 0;
+}
+section .counts>li{
+    width:33.3%;
+    display: inline-table;
+    text-align: center;
+}
+section .counts>li:first-child{
+    text-align: left;
+    padding-left:10px;
+}
+section .counts>li a{
+    color: #999;
+}
+section .counts>li a:hover,section .countries>li a:hover,section .dest-entry h2:hover{
+    color:#4f92b8;
+}
+section .counts>li{
+    border-right:1px solid #ccc;
+}
+section .counts>li:last-child{
+    border-right:none;
+}
+section .titles>li button{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #fff;
+    border-radius: 1px;
+    font-size: 22px;
+    width: 190px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+}
+section .countries {
+    height: 96px;
+    padding: 11px 15px;
+    display: table;
+}
+section .countries>li{
+    width:25%;
+    display: inline-table;
+    padding: 10px 0;
+}
+section .countries>li a{
+    color:#999;
+    font-size: 14px;
+}
+section .dest-entry {
+    background-color: #fff;
+    margin-bottom:50px;
+    width:1170px;
+}
+section .dest-entry h2 {
+    font-size: 18px;
+    color: #2c2c2c;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 400;
+    text-align: center;
+}
+section .specialty{
+    width:80%;
+    margin:0 auto;
+}
+section .specialty li{
+    width:270px;
+    height:365px;
+    float:left;
+    margin-right:30px;
+    position: relative;
+}
+section .specialty .overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+}
+section .specialty li .travalerChoice{
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat 0 -1000px transparent;
+    width: 235px;
+    height: 230px;
+    margin-top: 50px;
+    margin-left: 17.5px;
+}
+section .specialty li .main-content{
+    color:#fff;
+    margin-top:110px;
+}
+section .specialty li .guide-icon{
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat 0 -550px transparent;
+    display: block;
+    width:50px;
+    height:50px;
+    margin:0 auto;
+}
+section .specialty li h2{
+    font-weight: 400;
+    margin-top:20px;
+}
+section .specialty li .traveler-choice:hover .underline{
+    border-bottom: 2px solid #fff;
+    width:75%;
+    margin:0 auto;
+}
+section .specialty li .blog-icon{
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat 0 -600px transparent;
+    display: block;
+    width:50px;
+    height:50px;
+    margin:0 auto;
+}
+section .specialty .caption-content{
+    color:#fff;
+    margin-top:50px;
+}
+section .specialty .caption-content h2{
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+section .specialty .downLoad-code{
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat 0 -450px;
+    width:70px;
+    height:70px;
+    display: block;
+    position:absolute;
+    bottom: 12px;
+    right: 12px;
+}
+section .specialty a:hover .overlay1{
+    background-color: rgba(9,160,16,0.7);
+}
+section .specialty a:hover .overlay2{
+    background-color: rgba(239,115,14,0.7);
+}
+section .specialty a:hover .overlay3{
+    background-color: rgba(16,84,197,0.7);
+}
+section .specialty a:hover .overlay4{
+    background-color: rgba(15,195,146,0.7);
+}
+section .thumb{
+    position: relative;
+}
+section .thumb img{
+    width:170px;
+    height:241px;
+}
+section .mod-b{
+    width:80%;
+    margin:50px auto;
+}
+section .mod-hd{
+    text-align: center;
+    margin-bottom:30px;
+}
+section .mod-hd h2{
+    color: #2c2c2c;
+    font-size: 28px;
+    font-weight: 400;
+    display: inline-block;
+}
+section .mod-hd a{
+    font-size: 14px;
+    color: #069;
+}
+section .mod-hd a:hover{
+    text-decoration: underline;
+}
+section .mod-b .guide-list{
+    display: table;
+}
+section .mod-b .guide-list li{
+    width:170px;
+    margin-right:30px;
+    display: inline-table;
+}
+section .mod-b .guide-info a{
+    display: block;
+    margin-top: 5px;
+    color: #2c2c2c;
+    font-size: 14px;
+}
+section .mod-b .guide-info a:hover{
+    color:#4f92b8;
+}
+section .mod-b .guide-info p{
+    display: inline-block;
+    color: #999;
+    font-size: 14px;
+}
+section .mod-b .btn-dnld{
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat 0 -1800px;
+    width:31px;
+    height:31px;
+    display: block;
+    position: absolute;
+    right: 10px;
+    opacity: 0.6;
+    bottom: 10px;
+}
+section .mod-b .btn-dnld:hover{
+    opacity: 1;
+}
+section  .trip-list .blog-img{
+    width:270px;
+    height:165px;
+}
+section .trip-list .author-img{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+section .trip-list li{
+    width:270px;
+    height:345px;
+    float:left;
+    margin-right:30px;
+    border-bottom: 1px solid #cbcbcb;
+    background-color: #fff;
+}
+section .top-trip{
+    width:80%;
+    margin:0 auto;
+}
+section .top-trip .h4{
+    height:24px;
+    font-size: 18px;
+    color: #2c2c2c;
+    margin: 15px 20px 8px 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+section .top-trip .dest-info{
+    font-size: 12px;
+    color: #999;
+    margin: 0 20px;
+}
+section .top-trip .dest-info .dest-icon{
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat 0 -1850px;
+    width:11px;
+    height:14px;
+    display: inline-block;
+    vertical-align: middle;
+}
+section .top-trip .text-brief{
+    margin: 7px 20px 14px 20px;
+    font-size: 14px;
+    color: #2c2c2c;
+    height: 60px;
+}
+section .top-trip .author-info{
+    margin-left: 20px;
+    margin-bottom: 14px;
+    color: #999;
+    font-size: 12px;
+}
+section .top-trip .author-info .author-img{
+    vertical-align: middle;
+}
+section .top-trip .author-info .publish-date{
+    margin-left:10px;
+}
+section .makefriends{
+    width:80%;
+    margin:50px auto;
+}
+section .makefriends h2{
+    font-size: 26px;
+    color: #2c2c2c;
+    font-weight: normal;
+    margin-bottom:20px;
+}
+section .makefriends .qr-code{
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat 0 -200px;
+    width:128px;
+    height:128px;
+    float:left;
+    vertical-align: middle;
+}
+section .makefriends .wechat-content{
+    float: left;
+    margin-left:20px;
+    margin-top:10px;
+    position: relative;
+}
+section .makefriends .wechat-content span{
+    padding-left:28px;
+    padding-bottom: 5px;
+    display: block;
+}
+section .makefriends .wechat-content span:before{
+    content: "";
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat 0 -350px;
+    width:24px;
+    height:20px;
+    position: absolute;
+    left:0;
+}
+section .makefriends .wechat-content span:after{
+    content: "";
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat 0 -400px;
+    width:16px;
+    height:16px;
+    position: absolute;
+    top:2px;
+    margin-left:5px;
+}
+section .makefriends .wechat-content p{
+    font-size: 14px;
+    line-height: 22px;
+}
+section .destination{
+    width:80%;
+    margin:50px  auto;
+}
+section .destination h2{
+    font-size: 18px;
+    color: #2c2c2c;
+    margin-bottom:20px;
+}
+section .destination h2 span{
+    font-size: 14px;
+    color: #999;
+}
+section .destination .dest-intro a{
+    color:#666;
+    text-decoration: underline;
+}
+section .destination .dest-intro{
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+section .destination .list-items{
+    display: inline-block;
+    list-style: none;
+    width:190px;
+}
+section .destination ul li{
+    display:list-item;
+    margin-bottom:5px;
+}
+section .destination ul li a{
+    color: #999;
+    font-size: 14px;
+}
+section .destination a:hover{
+    color:#4f92b8;
+}
+section .destination li span{
+    background: url(images/sprite_homepage_2015-v1123690029.png)no-repeat 0 -700px;
+    width: 30px;
+    height: 16px;
+    display: inline-block;
+}
+section .destination .list-item{
+    display: inline-block;
+    list-style: none;
+    width:140px;
+    clear:both;
+}
+footer{
+    border-top:5px solid #629d2a;
+    margin-bottom:20px;
+}
+footer .footer-content{
+    width:80%;
+    margin:0 auto;
+}
+footer .footer-content .brand{
+    margin-top:30px;
+}
+footer .footer-content .brand img{
+    vertical-align: middle;
+}
+footer .footer-content .brand .slogan{
+    display:inline-block;
+    color:#3a8e1b;
+    font-size:12px ;
+    font-weight: bold;
+    margin-left:10px;
+}
+footer .footer-content .links{
+    margin:10px 0;
+}
+footer .footer-content  a{
+    font-size: 12px;
+    color: #069;
+}
+footer .footer-content  a:hover{
+    text-decoration: underline;
+}
+footer .footer-content .copyright p{
+    margin:5px 0;
+    color: #2c2c2c;
+    font-size: 12px;
+}
+footer .footer-content .icp{
+    margin:10px 0;
+}
+footer .footer-content .icp a{
+    margin-right: 10px;
+    color: #666;
+    text-decoration: none;
+}
